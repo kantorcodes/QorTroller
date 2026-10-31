@@ -1,5 +1,11 @@
-# .claudeignore
-# Claude Code ignore rules to prevent scanning sensitive files
+# .claudeignore - reference patterns, not an active Claude Code ignore file
+# Claude Code does not enforce .claudeignore; these patterns do not stop it
+# from reading credentials or other files. See its official permissions docs:
+# https://code.claude.com/docs/en/permissions#read-and-edit
+# To restrict Claude Code's Read tool, configure Read deny rules under
+# permissions.deny in .claude/settings.json (or managed settings).
+# Such rules are tool-specific; they are not an OS or shell sandbox.
+# The repository verifier only checks that these patterns are present.
 
 # Database files
 **/bridge.db
